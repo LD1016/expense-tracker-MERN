@@ -12,6 +12,9 @@ const transactions = require('./routes/transactions');
 
 const app = express();
 
+// Midleware
+app.use(express.json());
+
 app.use('/api/v1/transactons', transactions);
 
 const PORT = process.env.PORT || 5000;
